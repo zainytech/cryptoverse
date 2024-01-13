@@ -1,10 +1,74 @@
 import React from 'react'
+import { useState } from 'react';
+import { Select,Typography, Row, Col, Avatar, Card} from 'antd';
+import moment from 'moment';
 
-const News = () => {
+import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi.js';
+
+const { Text, Title } = Typography;
+const { Options } = Select;
+
+const News = ({simplified}) => {
+  const {data:cryptoNews , isFetching} = useGetCryptoNewsQuery()
+  console.log(cryptoNews);
+
+  if (!cryptoNews?.news) return "Loading...";
+  // if(isFetching) return "Loading...";
+  let count=0;
+  if(!simplified) {count=10;}
+  else {count=12;}
+  const demoImage = '';
   return (
-    <div>
-      news
-    </div>
+    <> 
+      <Row gutter={[24, 24]}>
+      {simplified && (
+        cryptoNews.news.map((news,i) => (
+          i<6 ? (
+            <Col xs={24} sm={12} lg={8} key={i}>
+              <Card hoverable className="news-card">
+                <a href={news.Url} target="_blank" rel="noreferrer">
+                  <div className="news-image-container">
+                    <Title className="news-title" level={4}>{news.Title}</Title>
+                    <img className='news-image' src={news.Image} alt="/news"/>
+                  </div>
+                    <p>
+                      {news.Description?.length >100 ? `${news.Description.substring(1,100)}...` : news.Description}
+                    </p>
+                    <div className='provider-container'>
+                      <Text>{moment(news.PublishedOn).startOf('ss').fromNow()}</Text>
+                    
+                    </div>
+                </a>
+              </Card>
+            </Col>
+          ) : null          
+        ))
+      )}
+        {!simplified && (
+        cryptoNews.news.map((news,i) => (
+          i<60 ? (
+            <Col xs={24} sm={12} lg={8} key={i}>
+              <Card hoverable className="news-card">
+                <a href={news.Url} target="_blank" rel="noreferrer">
+                  <div className="news-image-container">
+                    <Title className="news-title" level={4}>{news.Title}</Title>
+                    <img className='news-image' src={news.Image} alt="/news"/>
+                  </div>
+                    <p>
+                      {news.Description?.length >100 ? `${news.Description.substring(1,100)}...` : news.Description}
+                    </p>
+                    <div className='provider-container'>
+                      <Text>{moment(news.PublishedOn).startOf('ss').fromNow()}</Text>
+                    
+                    </div>
+                </a>
+              </Card>
+            </Col>
+          ) : null          
+        ))
+      )}
+      </Row>
+    </>
   )
 }
 

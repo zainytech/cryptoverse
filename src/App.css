@@ -295,6 +295,10 @@ a:hover{
 .news-card{
     min-height: 300px !important;
 }
+.news-image{
+    height:7rem;
+    width:7rem;
+}
 .news-image-container{
     display: flex !important;
     justify-content: space-between !important;
