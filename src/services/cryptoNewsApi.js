@@ -13,7 +13,7 @@ export const cryptoNewsApi = createApi({
   endpoints: (builder) => ({
     getCryptoNews: builder.query({
       // query: ({newsCategory}) => createRequest(`/search?query=${newsCategory}`),
-      query: () => createRequest(`/crypto?&languages=en`),
+      query: (token) => createRequest(`/crypto?&languages=en&batchSize=25&token=${token}`),
     
     }),
   }),
