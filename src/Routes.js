@@ -22,7 +22,7 @@ function RouteConfig() {
             <Route path="/cryptocurrencies" element={<Cryptocurrencies />} />
           </Routes>
           <Routes>
-            <Route path="/crypto/:coinid" element={<Cryptodetails />} />
+            <Route path="/crypto/:coinId" element={<Cryptodetails />} />
           </Routes>
           <Routes>
             <Route path="/exchanges" element={<Exchanges />} />

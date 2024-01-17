@@ -48,7 +48,7 @@ const News = ({simplified}) => {
         ))
       )}
         {!simplified && (
-
+          <>
           <Col span={24}>
           <Select
             showSearch
@@ -60,9 +60,9 @@ const News = ({simplified}) => {
           >
             {tokenArray.map((currency) => <Option value={currency}>{currency}</Option>)}
           </Select>
-          </Col>,
+          </Col>
 
-        cryptoNews.news.map((news,i) => (
+        {cryptoNews.news.map((news,i) => (
           i<60 ? (
             <Col xs={24} sm={12} lg={8} key={i}>
               <Card hoverable className="news-card">
@@ -84,6 +84,8 @@ const News = ({simplified}) => {
           ) : null      
             
         ))
+        }
+        </>
       )}
       </Row>
     </>

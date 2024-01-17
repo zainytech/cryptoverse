@@ -12,12 +12,15 @@ export const cryptoNewsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://news67.p.rapidapi.com/v2' }),
   endpoints: (builder) => ({
     getCryptoNews: builder.query({
-      // query: ({newsCategory}) => createRequest(`/search?query=${newsCategory}`),
       query: (token) => createRequest(`/crypto?&languages=en&batchSize=25&token=${token}`),
-    
+      // query: (token) => {
+      // const apiUrl = `/crypto?&languages=en&batchSize=25`;
+      // const tokenParam = token ? `&token=${token}` : ''; // Conditional token inclusion
+      // return createRequest(`${apiUrl}${tokenParam}`);
+      // }
     }),
   }),
 });
 
-export const { useGetCryptoNewsQuery  } = cryptoNewsApi;
+export const { useGetCryptoNewsQuery } = cryptoNewsApi;
 
