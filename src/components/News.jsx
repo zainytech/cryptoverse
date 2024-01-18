@@ -35,10 +35,9 @@ const News = ({simplified}) => {
                     <p>
                       {news.Description?.length >100 ? `${news.Description.substring(1,100)}...` : news.Description}
                     </p>
-                    <div>
-                      <Text className="provider-name">{news.Source}</Text>
-                    </div>
+                    
                     <div className='provider-container'>
+                      <Text className="provider-name">{news.Source}</Text>
                       <Text>{moment(news.PublishedOn).startOf('ss').fromNow()}</Text>
                     </div>
                 </a>
@@ -75,6 +74,7 @@ const News = ({simplified}) => {
                       {news.Description?.length >100 ? `${news.Description.substring(1,100)}...` : news.Description}
                     </p>
                     <div className='provider-container'>
+                    <Text className="provider-name">{news.Source}</Text>
                       <Text>{moment(news.PublishedOn).startOf('ss').fromNow()}</Text>
                     
                     </div>
