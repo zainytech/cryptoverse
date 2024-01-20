@@ -9,7 +9,7 @@ const { Text, Title } = Typography;
 const { Option } = Select;
 
 const News = ({simplified}) => {
-  const [newsToken, setNewsToken] = useState('BTC');
+  const [newsToken, setNewsToken] = useState('');
   const {data:cryptoNews , isFetching} = useGetCryptoNewsQuery(newsToken);
   let tokenArray = ["ADA","BCH","BNB","BTC","DOGE","DOT","EOS","ETC","ETH","FIL","ICP","LTC","MATIC","SOL","THETA","TRX","VET","XLM","XMR","XRP","USDT"]
   // console.log(cryptoNews);
@@ -57,6 +57,7 @@ const News = ({simplified}) => {
             onChange={(value) => setNewsToken(value)}
             filterOption={(input, option) => option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}
           >
+            <Option value="">All</Option>
             {tokenArray.map((currency) => <Option value={currency}>{currency}</Option>)}
           </Select>
           </Col>
