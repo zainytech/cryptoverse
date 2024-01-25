@@ -4,6 +4,7 @@ import { Select,Typography, Row, Col, Avatar, Card} from 'antd';
 import moment from 'moment';
 
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi.js';
+import Loader from './Loader.jsx';
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -14,7 +15,7 @@ const News = ({simplified}) => {
   let tokenArray = ["ADA","BCH","BNB","BTC","DOGE","DOT","EOS","ETC","ETH","FIL","ICP","LTC","MATIC","SOL","THETA","TRX","VET","XLM","XMR","XRP","USDT"]
   // console.log(cryptoNews);
 
-  if (!cryptoNews?.news) return "Loading...";
+  if (!cryptoNews?.news) return <Loader/>;
   // if(isFetching) return "Loading...";
   let count=0;
   if(!simplified) {count=10;} else {count=12;}
