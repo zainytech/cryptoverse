@@ -1,18 +1,13 @@
 import {fetchBaseQuery,createApi} from '@reduxjs/toolkit/query/react';
 
-const cryptoExchangeHeaders = {
-    'X-RapidAPI-Key': 'ea9a695fcbmshb68f36843fb162fp1f11aajsn722aa738fd24',
-    'X-RapidAPI-Host': 'coinpaprika1.p.rapidapi.com'
-}
-const baseUrl = 'https://coinpaprika1.p.rapidapi.com'
-const createRequest = (url) => ({url, header:cryptoExchangeHeaders});
+const baseUrl = ' https://api.coingecko.com/api/v3'
 
 export const cryptoExchange = createApi({
     reducerPath:"cryptoExchange",
     baseQuery : fetchBaseQuery({baseUrl:baseUrl}),
     endpoints: (builder) => ({
         getCryptoExchange: builder.query({
-            query : () => createRequest('/exchanges'),
+            query : (arg) => `/exchanges?x_cg_api_key=${arg.key}`,
         })
     })
 })

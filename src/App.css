@@ -382,3 +382,10 @@ width: 70%;
     padding: 20px;
     align-items: center;
 }
+
+@media screen and (max-width: 500px){
+    .exchange-image{
+        margin: 0px 0px !important;
+        display:block;
+    }
+}

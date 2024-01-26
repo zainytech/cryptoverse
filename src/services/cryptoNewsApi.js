@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const cryptoNewsHeaders = {
-  'X-RapidAPI-Key': 'ea9a695fcbmshb68f36843fb162fp1f11aajsn722aa738fd24',
+  'X-RapidAPI-Key': process.env.REACT_APP_API_KEY_NEWS,
   'X-RapidAPI-Host': 'news67.p.rapidapi.com'
 };
 

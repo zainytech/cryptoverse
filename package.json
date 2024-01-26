@@ -12,6 +12,7 @@
     "axios": "^1.6.2",
     "chart.js": "^4.4.1",
     "css-loader": "^6.8.1",
+    "dotenv": "^16.4.1",
     "html-react-parser": "^5.0.7",
     "millify": "^6.1.0",
     "moment": "^2.29.4",
