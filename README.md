@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Cryptoverse: A Real-Time Portal to stay updated with Blockchain world
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## [Demo Link](https://cryptoverse-webapp123.netlify.app/)
 
-## Available Scripts
+I built this comprehensive React application to stay ahead of the curve in the crypto world. Real-time data, insightful news, and in-depth analysis.
 
-In the project directory, you can run:
+## Key Features:
 
-### `npm start`
+- **Live Market Data**: Track current prices, charts, and historical trends for hundreds of cryptocurrencies through API (Coinranking Rapid API).
+- **Smart News**: You can read and filter the news base on your prefrence of coin (Connexun News Rapid API).
+- **Interactive Charts and Analysis**: Can visually see price changes with interactive charts (Chart.js JS Library).
+- **Cryptocurrency Details**: more detailed info about coins including their exchanges, history, and key metrics.
+- **User-Friendly and Responsive Design**: Responsive and user-friendly interface built with ANTD UI.
+- **Data Management**: Used (Redux-Toolkit + RTK Query) for efficient state management and API calls, for smooth and responsive user experience.
+- **Secure API Key Handling**: For protecting my API keys through an .env file, prioritizing security and privacy.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📦 Technologies I Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `React`
+- `Redux-Toolkit`
+- `Redux Query`
+- `REST API + Rapid API`
+- `Antdesign` (UI Framework of React)
+- `HTML/JSX`
+- `CSS`
+- `JavaScript`
 
-### `npm test`
+## Process
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+My API playground: Eager to get my hands dirty with APIs and Redux Toolkit, I decided to build a crypto app as my testbed. First, I scoured RapidAPI for free data sources and crafted a clean layout, complete with slick routing and a trusty Redux store. The homepage served as a launchpad, offering glimpses into the Cryptocurrencies and News pages.
 
-### `npm run build`
+Next, I tackled the Cryptocurrencies page, showcasing 100 digital coins in all their glory. But I didn't stop there! The Cryptodetails page unveiled each coin's hidden depths, including mesmerizing historical price charts powered by Chart.js (thanks Javascript Mastery). News was another beast, and I built a dynamic feed with a handy filter, letting you zero in on the latest buzz around specific coins. Finally, the Exchange page rounded things off, displaying exchange options and stats for every crypto – a one-stop shop for all your trading needs.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was a wild ride, but every API hurdle and Redux puzzle I conquered made it worth it. And now, my very own crypto app stands as a testament to the power of curiosity, code, and a little inspiration from Youtube tutorials!
