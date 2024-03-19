@@ -7,9 +7,9 @@ I built this comprehensive React application to stay ahead of the curve in the c
 ## 🔑 Key Features:
 
 - 🚚 **Live Market Data**: Track current prices, charts, and historical trends for hundreds of cryptocurrencies through API [(Coinranking Rapid API)](https://rapidapi.com/Coinranking/api/coinranking1).
-- 🧠 **Smart News**: You can read and filter the news base on your prefrence of coin [(Connexun News Rapid API)]().
+- 🧠 **Smart News**: You can read and filter the news base on your prefrence of coin [(Connexun News Rapid API)](https://rapidapi.com/connexun-srl-connexun-srl-default/api/news67/).
 - 📉 **Interactive Charts and Analysis**: Can visually see price changes with interactive charts (Chart.js JS Library).
-- 🧐 **Cryptocurrency Details**: More detailed info about coins including their exchanges (Coingeko REST API), history, and key metrics.
+- 🧐 **Cryptocurrency Details**: More detailed info about coins including their exchanges [(Coingeko REST API)](https://www.coingecko.com/en/api), history, and key metrics.
 - 📲 **User-Friendly and Responsive Design**: Responsive and user-friendly interface built with ANTD UI.
 - 🧑‍💼 **Data Management**: Used (Redux-Toolkit + RTK Query) for efficient state management and API calls, for smooth and responsive user experience.
 - 🔐 **Secure API Key Handling**: For protecting my API keys through an .env file, prioritizing security and privacy.
